@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/youth_earning_by_background_UK.csv"
+    },
+    "mark": {"type": "bar"},
+    "width": 500,
+    "height": 350,
+    "title": {
+      "text": "Mean Hourly Earnings (£) in the UK by Socio-economic Background",
+      "subtitle": "Mean Hourly Earnings among 15-29 year-olds by Socio-economic Background in the UK (2022) , Source: Social Mobility Commission UK"
+    },
+    "encoding": {
+      "x": {
+        "field": "Socio-economic background",
+        "type": "nominal",
+        "axis": {"grid": false},
+        "title": "Socio-economic Background"
+      },
+      "y": {"field": "Mean hourly earnings (£)", "type": "quantitative", "title": "Mean Hourly Earnings (£)"},
+      "color": {"field": "Socio-economic background"}
+    }
+  }

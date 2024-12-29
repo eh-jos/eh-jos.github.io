@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/youth_unempl.csv"
+    },
+    "mark": {"type": "bar"},
+    "width": 500,
+    "height": 350,
+    "title": {
+      "text": "Youth Unemployment in the UK by Socio-economic Background",
+      "subtitle": "Rate of Unemployment among 25-29 year-olds by Socio-economic Background in the UK (2022) , Source: Social Mobility Commission UK"
+    },
+    "encoding": {
+      "x": {
+        "field": "Socio-economic background",
+        "type": "nominal",
+        "axis": {"grid": false},
+        "title": "Socio-economic Background"
+      },
+      "y": {"field": "Percentage (%)", "type": "quantitative", "title": "Unemployment Rate (%)"},
+      "color": {"field": "Socio-economic background"}
+    }
+  }
