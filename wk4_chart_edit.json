@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/job_vacancy_rate.csv"
+    },
+    "mark": {"type": "line", 
+      "point": true,
+      "color":"royalblue"},
+    "width": 500,
+    "height": 350,
+    "title": {
+      "text": "Job Vacancy Rate ",
+      "subtitle": "Number of job vacancies for every unemployed 16 to 64 year old (UK, 2001 to 2023)"
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "axis": {"grid": false},
+        "title": "Year"
+      },
+      "y": {"field": "Vacancy rate", 
+            "type": "quantitative", 
+            "axis":{"values":[0,0.2,0.4,0.6,0.8,1],
+                    "grid": true},
+            "scale":{"domain":[0,1]},
+            "title": "Vacancy Rate"}
+      }
+    
+  }
