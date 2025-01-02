@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/data_eia-IND.json",
+    "format":{
+            "type":"json",
+            "property":"response.data"}},
+    "title": {"text": "Consumption of Renewable energy", "subtitle": "INDIA"},
+    "width": 100,
+    "height": 100,
+    "mark": {"type": "line", "color": "darkgreen"},
+    "encoding": {
+      "x": {"field": "period", "type": "temporal"},
+      "y": {"field": "value", "type": "quantitative", "title":"quadrillion Btu"}
+    }
+  }
