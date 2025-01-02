@@ -1,0 +1,57 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "title": {
+      "text": "Life expectancy vs literacy rate in South Asia",
+      "subtitle":["Size of points based on GDP per capita"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+  "config": {
+    "background":"white",
+    "view": {
+      "stroke": "transparent"}},
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/south_asian_life_expectancy.csv",
+      "format":{"type":"csv"}},
+  
+    "mark": {
+      "type":"circle",
+      "color":"orangered",
+      "opacity":0.7},
+    
+    "height": 300,
+    "width": 300,
+  
+    "encoding": {
+      "x": {
+        "field": "literacy_rate", 
+        "type": "quantitative",
+        "axis":{"grid": false},
+        "title":"Literacy Rate"},
+  
+      "y": {
+        "field": "life_expectancy", 
+        "type": "quantitative",
+        "axis":{"grid": false},
+        "title":"Life Expectancy"},
+
+      "size": {
+        "field": "GDP_pc_2021", 
+        "type": "quantitative",
+        "scale": { "range": [10, 800]},
+        "legend":null},
+  
+
+      "tooltip":[
+        {"field":"country", "type": "ordinal", "title":"Country"},
+        {"field":"life_expectancy", "type": "quantitative", "title":"Life Expectancy", "format":".0f"},
+        {"field":"literacy_rate", "type": "quantitative", "title":"Literacy Rate", "format":".2f"},
+        {"field":"GDP_pc_2021", "type": "quantitative", "title":"GDP per capita", "format":","}
+
+      ]
+     }
+  }
