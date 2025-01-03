@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/ev_sales.csv"
+    },
+    "title": {
+        "text": "Annual Sales of Light-Duty Plug-in Electric Vehicles 2023",
+        "subtitle": "Source: https://en.wikipedia.org/wiki/Electric_car_use_by_country"
+    },
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "bar"
+    },
+    "encoding": {
+        "x": {
+            "field": "Country/region",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "Annual_sales_2023",
+            "type": "quantitative",
+            "title": "Sales in USD"
+        },
+        "color": {
+            "field": "Country/region",
+            "type": "nominal"
+        }
+    }
+}

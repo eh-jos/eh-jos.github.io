@@ -152,6 +152,23 @@
 
     <section>
         <div class="chart-description">
+            <h2>Section 8: CC5 Scraping </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Scraping a webpage to produce a chart.  
+            </p>
+        </div>
+
+        <figure id="Location24"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                This is the chart made from scrping the following Wikipedia page
+                The link to the scraping code in GoogleCollable is []. 
+            </p>
+        </div>
+     
+    </section>
+
+    <section>
+        <div class="chart-description">
             <h2>Section 8: Big Data  </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 Narrative from Big Data 
@@ -227,6 +244,7 @@
         let figure_21_spec="wk5_chart_USA.json"
         let figure_22_spec="wk9_chart_scatter.json"
         let figure_23_spec="wk9_chart_bubble.json"
+        let figure_24_spec="wk6_chart_scraping.json"
 
 
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
@@ -258,6 +276,7 @@
         vegaEmbed('#Location21', figure_21_spec)
         vegaEmbed('#Location22', figure_22_spec)
         vegaEmbed('#Location23', figure_23_spec)
+        vegaEmbed('#Location24', figure_24_spec)
 
 
     </script>
