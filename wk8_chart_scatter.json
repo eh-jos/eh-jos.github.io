@@ -1,0 +1,17 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/ldn2004_ldn2024.csv"},
+
+    "title": {"text": "Comparing London Prices 2004 & 2024", "subtitle": ""}, 
+
+    "width":300,
+    "height":300,
+
+    "mark":{"type": "circle","color":"orange"},
+ 
+    "encoding": {
+      "x": {"field": "price_2004","type": "quantitative", "title":"Median 2004 Prices", "scale":{"type": "log"},"axis":{"grid": true, "gridOpacity":0.2, "ticks": false}},
+      "y": {"field": "price_2024","type": "quantitative", "title":"Median 2024 Prices","scale":{"type": "log"}, "axis":{"grid": true, "gridOpacity":0.2, "ticks": false}}
+    }
+}

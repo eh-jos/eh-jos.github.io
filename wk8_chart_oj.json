@@ -1,0 +1,17 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/shop_2_pure_oj.csv"},
+
+    "title": {"text": "Pure Orange Juice Price", "subtitle": "Shop 2.0 - London"}, 
+
+    "width":300,
+    "height":300,
+
+    "mark":{"type": "bar","color":"orange"},
+ 
+    "encoding": {
+      "x": {"field": "quote_date","type": "temporal", "title":""},
+      "y": {"field": "price","type": "quantitative", "title":"Price (£)"}
+    }
+}
