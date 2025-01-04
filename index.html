@@ -174,7 +174,14 @@
                 Narrative from Big Data 
             </p>
         </div>
-
+        <figure id="Location25"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Price of pure orange juice in one particular shop in London over time. 
+            </p>
+        <figure id="Location26"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+               Comparing prices in London 2004 and 2024.
+           </p>
         </div>
 
     </section>
@@ -245,6 +252,8 @@
         let figure_22_spec="wk9_chart_scatter.json"
         let figure_23_spec="wk9_chart_bubble.json"
         let figure_24_spec="wk6_chart_scraping.json"
+        let figure_25_spec="wk8_chart_oj.json"
+        let figure_26_spec="wk8_chart_scatter.json"
 
 
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
@@ -277,6 +286,8 @@
         vegaEmbed('#Location22', figure_22_spec)
         vegaEmbed('#Location23', figure_23_spec)
         vegaEmbed('#Location24', figure_24_spec)
+        vegaEmbed('#Location25', figure_25_spec)
+        vegaEmbed('#Location26', figure_26_spec)
 
 
     </script>
