@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 400,
+    "title": {
+      "text": "Germany Population by State",
+      "subtitle": [
+        "Map Source: https://github.com/AliceWi/TopoJSON-Germany/tree/master",
+        "Population Data Source: https://www.destatis.de/EN/Home/_node.html"
+      ]
+    },
+        "data": {
+          "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/germany_map.json", 
+          "format":{
+            "type": "topojson",
+            "feature": "states"}
+        },
+        "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "key": "name",
+          "fields": ["name", "pop"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/GER_pop.csv"
+          }
+        }
+      }
+    ],
+    "projection": {
+      "type":"albers"
+    }
+    ,
+        "mark": {
+          "type": "geoshape",
+      
+          "opacity": 0.5,
+          "stroke": "black",
+          "strokeWidth": 0.2
+        },
+        "encoding": {
+           "color": {
+        "field": "pop",
+        "type": "quantitative",
+        "legend": {
+          "title": ""
+        },
+        "scale": {
+          "type": "linear",
+          "scheme": "redyellowgreen",
+          "reverse": false
+        }
+      },
+          "tooltip":[{
+            "field":"properties.name",
+            "title":"State"
+          },
+          {"field":"pop",
+          "title":"Population"}]
+    
+        }
+        
+      
+   
+    
+  }
