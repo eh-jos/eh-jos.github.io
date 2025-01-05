@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 250,
+    "width": 400,
     "height": 400,
     "title": {
       "text": "Germany Regions",
@@ -18,6 +18,10 @@
             "type": "topojson",
             "feature": "states"}
         },
+          "projection": {
+      "type":"albers"
+    }
+    ,
         "mark": {
           "type": "geoshape",
           "fill": "lightgrey",
