@@ -54,8 +54,8 @@ section {
 /* Links */
 /* We want the links to be a little more visible  and a different color */
 a {
-  color: #045133;
-  text-decoration: none;
+  color: #1b047f;
+  text-decoration: underline;
 }
 
 a:hover {
