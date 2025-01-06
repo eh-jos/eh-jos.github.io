@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+<html> 
+ 
+
+<head>    
+    
+    <link rel="stylesheet" type="text/css" href="portfoliostyles.css">
+    <title>PP434 Project: Progress Towards Green Transition -- Decreasing Fossil Fuel Dependence in US Electricity Generation</title> <!-- The title displayed in the browser tab, not on the page itself -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #07502e;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #09744b;
+}
+        
+    </style>
 </head>
-<body>
-    <p>My project</p>
-</body>
+
+<body> 
+   
+        <h1 class="big" style="margin-bottom: 0px;"> 
+            
+            Progress Towards Green Transition -- Decreasing Fossil Fuel Dependence in US Electricity Generation
+        </h1>
+        <p >
+            <ul>
+                <li><a href="https://eh-jos.github.io/">Home</a></li>
+                <li><a href="https://www.linkedin.com/in/eha-joshi-a11338147">LinkedIn</a></a></li>
+                <li><a href="https://github.com/eh-jos/eh-jos.github.io.git">GitHub</a></li>
+                
+              </ul>
+    </p>
+        <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+            Project description. 
+        </h3>
+
+     <section>
+            <div class="project-aims">
+                <h2>Section 1: Aims</h2>
+                <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                    Aims of the project  
+                </p>
+            </div>
+            
+    </section>
+
+    <section>
+        <div class="project-data">
+            <h2>Section 2: Data</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Data description, data access, notes on automation/replication  
+            </p>
+        </div>
+        
+    </section>
+
+    <figure id="Location1"></figure> 
+    <figure id="Location2"></figure> 
+    <figure id="Location3"></figure> 
+    <figure id="Location4"></figure> 
+    <figure id="Location5"></figure> 
+    
+    <section>
+        <div class="project-challenges">
+            <h2>Section 3: Analytical Challenges</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                challenges in data cleaning and/or analysis, and the tools you used to overcome them  
+            </p>
+        </div>
+        
+    </section>
+
+    <section>
+        <div class="project-Conclusions">
+            <h2>Section 4: Conclusions</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Conclusions from the data.   
+            </p>
+        </div>
+        
+    </section>
+
+
+      
+    <script>
+       
+
+        let figure_1_spec = "project_CO2_emiss.json"                                                                                               
+        let figure_2_spec= "project_coal_consump.json"
+        let figure_3_spec="project_renewables_consump.json"
+        let figure_4_spec="project_US_non_ff_empl_2016_2019.json"
+        let figure_5_spec="project_us_elec_gen_wf.json"
+
+        vegaEmbed('#Location1', figure_1_spec) 
+        vegaEmbed('#Location2', figure_2_spec)
+        vegaEmbed('#Location3', figure_3_spec)
+        vegaEmbed('#Location4', figure_4_spec)
+        vegaEmbed('#Location5', figure_5_spec)
+
+    </script>
+
+</body> 
 </html>
