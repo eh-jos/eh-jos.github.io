@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "SAS litter",
+    "title": {
+  
+      "text": "US Electricity Generation Workforce",
+  
+      "subtitle": "Breakdown of US Electricity Generation Sector Workforce. Source: USEER",
+  
+      "subtitleFontStyle":"italic",
+  
+      "subtitleFontSize":10,
+  
+      "anchor": "start",
+  
+      "color": "black"
+   },
+  
+    "data": {"url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/us_elect_gen_wf_22_23.csv"},
+    "mark":{
+  
+   
+  
+        "type": "bar",
+  
+        "color":"forestgreen",
+  
+        "strokeWidth":2,
+  
+        "opacity":1
+  
+   
+  
+      },
+    "height": 300,
+    "width": 400,
+    "transform": [{"filter":"datum.date==year"}],
+      "params": [
+      {
+        "name": "year",
+        "value": 2022,
+        "bind": {
+          "input": "range",
+          "min": 2022,
+          "max": 2023,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+  
+    "encoding": {
+      "y": {"field": "source", "type": "ordinal", "sort":[], "title": null},
+  
+      "x": {"field": "value", "type": "quantitative", "title": "Number of workers","scale":{"domain":[0,450000]} },
+      "tooltip":[{"field":"source", "title":null},{"field":"value","title":null}]
+   
+  
+      }
+  
+  
+  }
