@@ -4,8 +4,8 @@
       "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/youth_earning_by_background_UK.csv"
     },
     "mark": {"type": "bar"},
-    "width": 500,
-    "height": 350,
+    "width": 300,
+    "height": 300,
     "title": {
       "text": "Mean Hourly Earnings (£) in the UK by Socio-economic Background",
       "subtitle": "Mean Hourly Earnings among 15-29 year-olds by Socio-economic Background in the UK (2022) , Source: Social Mobility Commission UK"
