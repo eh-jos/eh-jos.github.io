@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+  
+    "description": "Second Hand Car Sales",
+      "title": {"text": "Second Hand Car Sales", "subtitle": "Source: ONS"},
+  
+    "height": 300,
+    "width": 500,
+  
+
+    
+    "data": {
+       "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/second_hand_carsales_by_type.csv"
+      
+     },
+           "transform": [
+      {"filter": {"selection": "chooseItem"}},
+    {
+      "filter": {
+        "field": "Car_type",
+        "oneOf": ["Diesel","Hybrid","Petrol"]
+      }
+    }
+  ],
+
+"selection": {
+    "chooseItem": {
+      "type": "single",
+      "init": {"Car_type": "Diesel"},
+      "fields": ["Car_type"],
+      "bind": {
+        "input": "select",
+        "options": [
+          "Diesel",
+          "Hybrid",
+          "Petrol"        
+        ],
+        "name": "Pick car type:"
+      }
+    }
+  },
+      
+    "mark": {"type": "line", 
+              "color":"goldenrod"},
+  
+        "encoding": {
+          
+       
+  
+          "x": {
+            "field": "Date", "type": "temporal", "timeUnit":"yearmonth",
+            "axis": {"grid": false, "title": "Date", "tickCount": 37}},
+          
+          "y": {
+            "field": "Percent",
+            "type": "quantitative",
+            "axis": {
+              "gridDash": [1, 5],
+              "title":"Proportion of total sales"
+            }
+          },
+          
+  
+          
+          "tooltip":[{
+            "field":"",
+            "title":""
+          },
+          {"field":"",
+          "title":""}]   
+        }
+      }

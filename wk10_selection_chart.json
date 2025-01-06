@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+  
+    "description": "Coal Reveserves",
+      "title": {"text": "Coal Reveserves", "subtitle": "Source: EIA API"},
+  
+    "height": 300,
+    "width": 500,
+  
+    "view": {"stroke": "transparent"},
+    
+    "data": {
+       "url": "https://api.eia.gov/v2/international/data/?frequency=annual&data[0]=value&facets[activityId][]=6&facets[countryRegionId][]=AUS&facets[countryRegionId][]=BRA&facets[countryRegionId][]=CAN&facets[productId][]=7&facets[unit][]=MST&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=VwVddTtCdvvj4wtaPI2UgFWxsTplnbZVQ7UGT1vu",
+      "format":{
+              "type":"json",
+              "property":"response.data"}},
+  
+     "selection": {
+       "region": {"type": "multi", "fields": ["countryRegionId"], "bind": "legend"}
+     },
+       
+      
+    "mark": {"type": "area"},
+  
+        "encoding": {
+          
+          "color": {
+            "field": "countryRegionId",
+            "type": "nominal",
+            "scale": {"scheme": "goldgreen"},
+            "legend": {
+              "title": "Country",
+              "orient": "bottom",
+              "columns": 1,
+              "labelLimit": 0,
+              "titleLimit": 0,
+              "labelFontSize": 10}},
+  
+          "x": {
+            "field": "period", "type": "temporal",
+            "axis": {"grid": false, "title": null}},
+          
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {
+              "gridDash": [1, 5],
+              "title":"million short tons (MST)"
+            }
+          },
+  
+          "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1},
+          "tooltip":[{
+            "field":"countryRegionId",
+            "title":"Country:"
+          },
+          {"field":"value",
+          "title":"Reserve"}]   
+        }
+      }
