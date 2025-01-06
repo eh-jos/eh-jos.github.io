@@ -1,0 +1,91 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Share of Electricity Generation Employment in Non-Fossil Fuel",
+      "subtitle": [
+        "2016-2019",
+        "Source: USEER",
+        ""
+      ],
+      "fontSize": 16,
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": "lighter",
+      "anchor": "middle"
+    },
+    "description": "A map of share of employment in electricity generation from non-fossil fuel sources.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/non_ff_elec_gen_per_v3.csv"
+    },
+    "width": 600,
+    "height": 330,
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "key": "id",
+          "fields": ["properties", "type", "geometry"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/datasets/advanced/us_states.json",
+        "format": {
+        "type": "topojson",
+        "feature": "states"
+      }
+          }
+        }
+      } ,{
+      "calculate": "parseInt(datum.date)",
+      "as": "year_num"
+    },
+      {"filter": "datum.year_num==year"}
+    ],
+    "projection": {
+      "type": "albersUsa"
+    },
+    "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "strokeWidth": 0.3
+    },
+    "params": [
+      {
+        "name": "year",
+        "value": 2016,
+        "bind": {
+          "input": "range",
+          "min": 2016,
+          "max": 2019,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+    "encoding": {
+      "color": {
+        "condition": {
+          "value": "lightgrey",
+          "test": "!datum['per_value']"
+        },
+        "field": "per_value",
+        "type": "quantitative",
+        "legend": {
+          "title": ""
+        },
+        "scale": {
+          "type": "linear",
+          "scheme": "yellowgreen",
+          "reverse": false,
+          "domain":[0,100]
+        }
+      },
+      "tooltip": [
+        {
+          "field": "name",
+          "title": "State"
+        },
+        {
+          "field": "per_value",
+          "title": "% of Electricity Generation Employment"
+        }
+      ]
+    }
+  }
