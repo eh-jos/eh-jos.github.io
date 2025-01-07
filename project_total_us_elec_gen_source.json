@@ -57,7 +57,7 @@
         "scale":{
           "scheme":"bluegreen"
         },
-        "legend":{"title":"Source"}
+        "legend":{"title":"Source (Select to isolate)"}
       },
        "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1},
   
