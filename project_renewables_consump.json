@@ -31,8 +31,8 @@
           "scale": {"scheme": "bluegreen"},
           "legend": {
             "title": "Country",
-            "orient": "bottom",
-            "columns": 1,
+            "orient": "top-left",
+            "columns": 3,
             "labelLimit": 0,
             "titleLimit": 0,
             "labelFontSize": 10}},
