@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Consumption of Energy for Electricity Generation",
+  
+     "title": {
+      "text": "Consumption of Energy for Electricity Generation (US Total)",
+      "subtitle":"Source: EIA API",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start"},
+    
+     
+    "data": {
+        "url": "https://api.eia.gov/v2/electricity/electric-power-operational-data/data/?frequency=annual&data[0]=consumption-for-eg-btu&facets[fueltypeid][]=FOS&facets[fueltypeid][]=REN&facets[location][]=US&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000&api_key=VwVddTtCdvvj4wtaPI2UgFWxsTplnbZVQ7UGT1vu",
+      "format":{
+              "type":"json",
+              "property":"response.data"}},
+       "selection": {
+       "region": {"type": "multi", "fields": ["fuelTypeDescription"], "bind": "legend"}
+     },
+    
+  
+    "height": 300,
+    "width": 300,
+    "view": {"stroke":"transparent"},
+    
+  
+    "mark": {
+      "type": "bar",
+      "point": false
+    },
+  
+    
+    "encoding": {
+      
+      "x": {
+        "field": "period",
+        "type": "temporal",
+        "axis": {
+          "title": null,
+          "grid": false,
+          "labelSeparation": 5}
+          },
+  
+      "y": {
+        "field": "consumption-for-eg-btu",
+        "type": "quantitative",
+        "title": "million Btu",
+        "axis": {
+          "grid": false
+          }},
+  
+      "color":{
+        "field":"fuelTypeDescription",
+        "type": "nominal",
+        "scale":{
+          "scheme":"bluegreen"
+        },
+        "legend":{"title":"Source"}
+      },
+       "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1},
+  
+      "tooltip":[{"field":"fuelTypeDescription","title":"Source"},
+        {"field":"consumption-for-eg-btu","title":"Value"},{"field":"period", "title":"Year", "type": "temporal", "format":"%Y"}]      
+    }
+  }
