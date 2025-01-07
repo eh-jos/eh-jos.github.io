@@ -47,7 +47,8 @@
           "axis": {
             "gridDash": [1, 5],
             "title":"quadrillion Btu"
-          }
+          },
+          "scale":{"domainMin":0}
         },
 
         "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1},
