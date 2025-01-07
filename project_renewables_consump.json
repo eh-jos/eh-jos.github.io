@@ -46,10 +46,7 @@
           "type": "quantitative",
           "axis": {
             "gridDash": [1, 5],
-            "titleAngle": 0,
-            "titleAlign": "left",
-            "titleFontStyle": "italic",
-            "titleY": -10
+            "title":"quadrillion Btu"
           }
         },
 
