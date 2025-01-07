@@ -14,10 +14,16 @@
       "format":{
               "type":"json",
               "property":"response.data"}},
+
   
      "selection": {
        "region": {"type": "multi", "fields": ["countryRegionId"], "bind": "legend"}
      },
+     "transform": [
+    {
+      "filter": "datum.period >= 315532800000"
+    }
+  ],
        
       
     "mark": {"type": "area"},
@@ -30,8 +36,8 @@
             "scale": {"scheme": "greenblue"},
             "legend": {
               "title": "Country",
-              "orient": "bottom",
-              "columns": 1,
+              "orient": "top-left",
+              "columns": 3,
               "labelLimit": 0,
               "titleLimit": 0,
               "labelFontSize": 10}},
@@ -45,13 +51,18 @@
             "type": "quantitative",
             "axis": {
               "gridDash": [1, 5],
-              "titleAngle": 0,
-              "titleAlign": "left",
-              "titleFontStyle": "italic",
-              "titleY": -10
+              "title":"million metric tonnes carbon dioxide (MMTCD)"
             }
           },
   
-          "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1}   
+          "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1},
+
+  
+
+  "tooltip":[
+    {"field":"countryRegionId", "title":"Country"},
+    {"field":"period", "title":"Year", "type": "temporal", "format":"%Y"},
+    {"field":"value","title":"Consumption"}
+  ]   
         }
       }
