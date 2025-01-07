@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
       "text": "Share of Employment in Non-Fossil Fuel Electricity Generation",
-      "subtitle": ["Proportion of total electricity generation workforce involved in non-fossil fuel sourced electricity"
+      "subtitle": ["Proportion of total electricity generation workforce involved in non-fossil fuel sourced electricity",
         "2016-2019",
         "Source: USEER",
         ""
