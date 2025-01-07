@@ -35,7 +35,7 @@
             "type": "nominal",
             "scale": {"scheme": "greenblue"},
             "legend": {
-              "title": "Country",
+              "title": "Country (Select to isolate)",
               "orient": "top-left",
               "columns": 3,
               "labelLimit": 0,
