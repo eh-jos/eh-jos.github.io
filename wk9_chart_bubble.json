@@ -44,6 +44,10 @@
         "type": "quantitative",
         "scale": { "range": [10, 800]},
         "legend":null},
+        "color":{
+            "field":"country",
+            "legend":{"gridAlign":"all"}
+        },
   
 
       "tooltip":[
