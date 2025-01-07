@@ -56,15 +56,15 @@ li a:hover {
                 
               </ul>
     </p>
-        <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+        <h3 class="small"> 
             Project description. 
         </h3>
 
      <section>
             <div class="project-aims">
                 <h2>Section 1: Aims</h2>
-                <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                    Aims of the project  
+                <p> 
+                    Globally, carbon emission and other greenhouse gases are reaching record breaking amounts and the effects of rising global temperatures are having serious effects on life on earth from destruction of natural habitats, biodiversity loss, rising sea levels, extreme weather events, and much more. This crisis is largely a result of human economic activity, particularly the reliance on fossil fuels since the start of the industrial revolution. The aim of this project is to examine the United States’ dependence on fossil fuels in electricity generation. This in the broader context of transitioning to a “greener” global economy by reducing reliance on fossil fuels and using renewable energy sources to reduce carbon dioxide (CO2) emissions. With global warming on the rise and many countries failing to meet milestones necessary to meet standards set by the Paris Agreement, it is imperative that governments of world’s largest economies prioritize decarbonization efforts and move away from fossil fuel dependence. To mitigate climate change, renewable energy sources are crucial. To assess the United States' commitment to renewable energy, this project examines the workforce involved in non-fossil fuel electricity generation. The size of this workforce can be seen as a proxy for investment and industry growth.
                 </p>
             </div>
             
@@ -73,8 +73,8 @@ li a:hover {
     <section>
         <div class="project-data">
             <h2>Section 2: Data</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Data description, data access, notes on automation/replication  
+            <p> 
+                Data for this project was sourced using the United States Energy Information Administration (EIA) government website API. Because the data URL for these visualizations are API’s, they will be automatically updated with new data and show live updates. The API URL was accessed with a public key and directly linked to charts relating to the global consumption of fossil fuels and renewable energy, the consumption of fuels for electricity generation in the US and global carbon emissions. Data for the size of the workforce of the United States energy sector was sourced from annual United States Energy & Employment Jobs Reports (USEER). These reports provide granular breakdowns of the energy sector by state, industry, and workforce characteristics. These were available to download as Excel files and were converted to CSV’s and uploaded to GitHub to be used as chart data sources. Charts for the global consumption of fossil fuels and renewable energy, the consumption of fuels for electricity generation in the US and global carbon emissions include selectable legends that filter the visible data.   
             </p>
         </div>
         
@@ -91,8 +91,8 @@ li a:hover {
     <section>
         <div class="project-challenges">
             <h2>Section 3: Analytical Challenges</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                challenges in data cleaning and/or analysis, and the tools you used to overcome them  
+            <p> 
+                Workforce data from the USEER annual reports were publicly available but required cleaning and reformatting into long formats for plotting. Data on workforce size and characteristics for different years were merged to create on dataset CSV file. For the share of the electricity generation workforce involved in non-fossil fuel electricity generation, Excel data on the total size of the electricity generation workforce by state and the total size of the workforce for electricity generation from fossil fuels were subtracted and then used to find the proportion of the workforce involved in electricity generation from non-fossil fuel sources.    
             </p>
         </div>
         
@@ -101,8 +101,16 @@ li a:hover {
     <section>
         <div class="project-Conclusions">
             <h2>Section 4: Conclusions</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Conclusions from the data.   
+            <p> 
+                The CO2 emissions and coal consumption charts reveal the United States heavily relies on fossil fuels, ranking as a major CO2 emitter and the second-largest coal consumer. While coal consumption has decreased modestly since its peak and renewable energy consumption has increased, it still lags behind other developed countries in transitioning away from fossil fuels at comparable rates.   
+            </p>
+            
+            <p>
+                Looking at the share of the electricity generation workforce exclusively involved in electricity generation from non-fossil fuel sources, we see more states have a higher percentage of workers involved in non-fossil fuel related energy sectors. Similarly, the bar chart for the total United States electricity generation workforce by energy source shows substantially more workers are involved in renewable energy than not. This trend indicates a potential for job creation and a transition to a greener economy. However, some renewable energy sources may be more labor-intensive than others, which could impact workforce size/costs.
+            </p>
+                
+            <p>
+                Overall, while the United States has made progress in reducing its reliance on fossil fuels, further action is needed to accelerate the transition to a clean energy future. It still relies heavily on fossil fuels for electricity generation despite more recent increased investment into renewable energy technology. There is further scope to delve deeper in planned investment and political commitment to net zero goals and decarbonization in the future. 
             </p>
         </div>
         
