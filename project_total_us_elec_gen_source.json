@@ -46,7 +46,7 @@
       "y": {
         "field": "consumption-for-eg-btu",
         "type": "quantitative",
-        "title": "million Btu",
+        "title": "million MMBtu",
         "axis": {
           "grid": false
           }},
