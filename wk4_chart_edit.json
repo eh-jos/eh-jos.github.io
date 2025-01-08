@@ -4,8 +4,8 @@
       "url": "https://raw.githubusercontent.com/eh-jos/eh-jos.github.io/refs/heads/main/job_vacancy_rate.csv"
     },
     "mark": {"type": "line", 
-      "point": true,
-      "color":"royalblue"},
+      "point": {"filled": true,"color":"darkolivegreen"},
+      "color":"olive"},
     "width": 500,
     "height": 350,
     "title": {
@@ -24,7 +24,8 @@
             "axis":{"values":[0,0.2,0.4,0.6,0.8,1],
                     "grid": true},
             "scale":{"domain":[0,1]},
-            "title": "Vacancy Rate"}
+            "title": "Vacancy Rate"},
+      "tooltip":[{"field":"Vacancy rate", "title":"rate"},{"field":"Year","title":"", "type": "temporal", "format":"%Y"}]
       }
     
   }
